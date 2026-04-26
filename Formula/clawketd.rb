@@ -1,8 +1,10 @@
 class Clawketd < Formula
-  desc "Clawket daemon — local-first work management state layer (axum + rusqlite + sqlite-vec)"
+  desc "Clawket daemon — local-first work management state layer"
   homepage "https://github.com/clawket/daemon"
   version "0.2.3"
   license "MIT"
+
+  depends_on "clawket" => :recommended
 
   on_macos do
     on_arm do
@@ -25,8 +27,6 @@ class Clawketd < Formula
       sha256 "3972d461d1ae397c1bc6b0727ea3af30a71ce08881253b1584e7e1ff17c61d0c"
     end
   end
-
-  depends_on "clawket" => :recommended
 
   def install
     bin.install "clawketd"
